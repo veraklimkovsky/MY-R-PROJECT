@@ -1,0 +1,33 @@
+---
+title: "My R Markdown"
+author: "Vera Klimkovsky"
+date: "December 30, 2019"
+output:
+  word_document: default
+  html_document:
+    df_print: paged
+---
+
+```{r setup, include=FALSE}
+knitr::opts_chunk$set(echo = TRUE)
+```
+
+## R Markdown
+
+This is an R Markdown document. Markdown is a simple formatting syntax for authoring HTML, PDF, and MS Word documents. For more details on using R Markdown see <http://rmarkdown.rstudio.com>.
+
+When you click the **Knit** button a document will be generated that includes both content as well as the output of any embedded R code chunks within the document. You can embed an R code chunk like this:
+
+```{r table}
+table <-c(1,0,3,7,1)
+```
+
+## Including Plots
+
+You can also embed plots, for example:
+
+```{r plot, echo=FALSE}
+barplot(table, names=c(0.95,2.95,4.95,6.95,8.95), col=rgb(0.20,0.40,0.80,1), xlab="Amount of Arsenic (micrograms/serving)", ylab="Frequency", main="Arsenic in Rice", ylim=c(0,8), width=c(1,1,1,1,1), space=c(0.05,0.05,0.05,0.05,0.05))
+```
+
+Note that the `echo = FALSE` parameter was added to the code chunk to prevent printing of the R code that generated the plot.
